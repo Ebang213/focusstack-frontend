@@ -69,6 +69,13 @@ export default function App() {
           </div>
         ))}
       </div>
+
+      {/* About / Footer */}
+      <footer className="mt-12 text-center text-sm text-gray-500">
+        FocusStack is curated by <strong>Eugene</strong>, a remote worker. I only list
+        tools I personally find helpful. Some links are affiliate links — they cost
+        you nothing but help keep the site online.
+      </footer>
     </main>
   );
 }
