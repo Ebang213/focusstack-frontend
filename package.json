@@ -2,39 +2,35 @@
   "name": "focusstack-frontend",
   "version": "1.0.0",
   "private": true,
-  "description": "FocusStack frontend for displaying productivity tools and products",
-  "main": "src/index.js",
   "scripts": {
+    "dev": "react-scripts start",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint": "eslint ./src",
-    "dev": "react-scripts start"
+    "test": "react-scripts test --watchAll=false",
+    "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --max-warnings=0",
+    "format": "prettier --write .",
+    "preview": "serve -s build -l 5000"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "tailwindcss": "^3.4.7",
-    "autoprefixer": "^10.4.17",
-    "postcss": "^8.4.31"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-scripts": "5.0.1"
   },
   "devDependencies": {
     "eslint": "^8.57.0",
     "eslint-config-react-app": "^7.0.1",
+    "prettier": "^3.3.3",
+    "serve": "^14.2.4",
     "typescript": "4.9.5"
   },
+  "eslintConfig": {
+    "extends": ["react-app", "react-app/jest"]
+  },
   "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "production": [">0.2%", "not dead", "not op_mini all"],
+    "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
+  },
+  "engines": {
+    "node": ">=18 <21"
   }
 }
